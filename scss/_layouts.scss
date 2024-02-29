@@ -1,0 +1,65 @@
+@use './base' as *;
+
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--clr-grey-light-2);
+    box-shadow: 0 2rem 6rem var(--clr-shadow-dark);
+
+    min-height: 50rem;
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: var(--clr-other-1);
+    border-bottom: var(--border-1-grey);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    background-color: var(--clr-grey-dark-1);
+
+    flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view {
+    background-color: var(--clr-other-1);   
+
+    flex: 1;
+}
+
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--clr-grey-light-2);
+    border-bottom: var(--border-1-grey);
+}
+
+.description {
+    background-color: var(--clr-other-white);
+    box-shadow: var(--clr-shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

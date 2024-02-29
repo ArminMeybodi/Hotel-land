@@ -1,0 +1,18 @@
+
+@use './base' as *;
+@use './layouts' as *;
+@use './components' as *;
+
+:root {
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+   
+    @each $color, $directions in $border {
+        @each $direction, $value in $directions {
+            --border-#{$color}-#{$direction}: #{$value};
+        }
+    }
+}
