@@ -380,7 +380,7 @@ img {
   flex: 0 0 50%;
   margin-bottom: 0.7rem;
 }
-.list__item:before {
+.list__item::before {
   content: "";
   display: inline-block;
   height: 1rem;
@@ -400,6 +400,9 @@ img {
 }
 .recommend__count {
   margin-right: auto;
+}
+.recommend__friends {
+  display: flex;
 }
 .recommend__photo {
   box-sizing: content-box;
@@ -445,7 +448,7 @@ img {
   margin-bottom: 0.4rem;
 }
 .review__user-date {
-  font-weight: 600;
+  font-size: 1rem;
   color: var(--clr-grey-dark-3);
 }
 .review__rating {
@@ -465,6 +468,71 @@ img {
   z-index: 0;
 }
 
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.cta__book-now {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.cta__book-now {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary-dark));
+  color: var(--clr-other-white);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+}
+.btn__visible {
+  padding: 2rem 7.5rem;
+}
+.btn__invisible {
+  position: absolute;
+  padding: 2rem 0;
+  left: 0;
+  top: -100%;
+}
+.btn:hover {
+  background-image: linear-gradient(to left, var(--clr-primary-light), var(--clr-primary-dark));
+}
+.btn:hover .btn__visible {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.btn:hover .btn__invisible {
+  top: 0;
+}
+.btn:focus {
+  outline: none;
+  -webkit-animation: pulsate 1s infinite;
+          animation: pulsate 1s infinite;
+}
+
 :root {
   --clr-primary-normal: hsl(343, 82%, 55%);
   --clr-primary-dark: #BA265D;
@@ -481,6 +549,6 @@ img {
   --clr-icon-grey-dark-2: invert(52%) sepia(18%) saturate(7%) hue-rotate(321deg) brightness(86%) contrast(84%);
   --clr-icon-primary-normal: brightness(0) saturate(100%) invert(30%) sepia(89%) saturate(2788%) hue-rotate(325deg) brightness(92%) contrast(98%);
   --clr-shadow-dark: 0 2rem 6rem hsla(0, 0%, 0%, 0.3);
-  --clr-shadow-light: 0 2rem 5rem hsla(0, 0%, 0%, 0.411);
+  --clr-shadow-light: 0 2rem 2rem hsla(0, 0%, 0%, 0.411);
   --border-1-grey: 1px solid var(--clr-grey-light-1);
 }/*# sourceMappingURL=main.css.map */

@@ -330,7 +330,7 @@
         margin-bottom: .7rem;
     }
 
-    &__item:before {
+    &__item::before {
         content: "";
         display: inline-block;
         height: 1rem;
@@ -355,6 +355,10 @@
 
     &__count {
         margin-right: auto;
+    }
+
+    &__friends {
+        display: flex;
     }
 
     &__photo {
@@ -412,7 +416,7 @@
     }
 
     &__user-date {
-        font-weight: 600;
+        font-size: 1rem;
         color: var(--clr-grey-dark-3);
     }
 
@@ -432,5 +436,88 @@
         color: var(--clr-grey-light-1);
         font-family: sans-serif;
         z-index: 0;
+    }
+}
+
+////////////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
+
+////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     padding: 2.5rem 0;
+    // }
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--clr-primary-light), var(--clr-primary-dark));
+    color: var(--clr-other-white);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--clr-primary-light), var(--clr-primary-dark));
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
     }
 }
