@@ -1,14 +1,14 @@
+//VARIABLES
 $colors:(
     primary:(
         normal: hsl(343, 82%, 55%),
         dark:#BA265D ,
         light: hsl(338, 66%, 44%),
-
     ),
 
     "grey":(
         light-1: hsl(0, 0%, 83%),
-        light-2: hsl(0, 0%, 90%),
+        light-2: hsl(0, 0%, 89%),
         light-3: hsl(0, 6%, 94%),
         light-4: hsl(0, 0%, 80%),
         
@@ -45,6 +45,13 @@ $border: (
     )
 );
 
+//BREAKPOINT SIZES
+$bp-largest: 75em; //1200 px
+$bp-large: 68.75em; //1100 px
+$bp-medium: 56.25em; //900 px
+$bp-small: 37.5em; //900 px
+$bp-smallest: 31.25em; //500 px
+
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +66,10 @@ $border: (
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -67,21 +78,21 @@ body {
     background-image: linear-gradient(to right bottom, 
     var(--clr-primary-light),
     var(--clr-primary-dark));
-    min-height: 100vh;
-    margin: 2rem 8rem; 
+    min-height: 100svh;
 
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: var(--clr-grey-dark-2);
+    color: var(--clr-grey-dark-1);
 }
 
 img {
     font-style: italic;
     vertical-align: middle;
-     max-width: 100%;
+    max-width: 100%;
 }
 
+//MIXINS
 @mixin input {
     font-family: inherit;
     font-size: inherit;
